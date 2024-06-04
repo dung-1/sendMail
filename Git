@@ -1,1 +1,21 @@
-<p> Git<p/>
+1. Cat .git/HEAD: xem phần head đang ở branch nào và cũng chỉ commit cuối cùng của nhánh.
+2. git log: kiểm tra lịch sử commit
+3. git log --oneline : kiểm tra danh sách nhánh 
+4. git checkout: +Tên nhánh(feature/test1): thì chỉ đến nhánh đó 
+                 +Tên nhánh(id commit): nó sẽ chỉ đến nhánh đó nhưng lại rơi vào trạng thái DETACHED HEAD(rời bỏ head) -> khi đó phải tạo nhánh mới là : git switch -c(tên nhánh)
+5. git switch: +,  git switch -c(tên nhánh): tạo nhánh mới.
+              +,  git switch (tên nhánh): chuyển nhánh và cập nhạt trạng thái nhánh là HEAD.
+6. git brand: + git branch : hiện thị nhánh cục bộ cũng như nhánh remote
+              + git brand (tên nhánh): tạo nhánh
+7. git reset: dùng để quay lại trạng thái commit cần được chỉ định(nên dùng khi chưa push vì push rồi sẽ vẫn pull về được)
+              --hard|soft HEAD     -> Di chuyển con trỏ đến commit hiện tại.
+              --hard|soft HEAD^    -> Quay về trước 1 commit so với HEAD.
+              --hard|soft HEAD~1   -> Quay về trước 1 commit so với HEAD.
+              --hard|soft HEAD~2   -> Quay về trước 2 commit so với HEAD.
+              --hard|soft HEAD~n   -> Quay về trước n commit so với HEAD.
+              +,hard:là vừa xóa commit và xóa code(không khuyến dùng nếu không chắc chắn)
+              +,soft:là vừa xóa commit và xóa không xóa code( khuyến dùng)
+8. git revert: (git revert(commit-hash) HEAD^) là cũng dùng HEAD để chuyển đổi vi trí để revert và hoạt động là không thay dổi code mà nó quay lại commit được chỉ định và tạo ra 1 commit mới 
+và mình thay đổi trong đó đồn thời commit lại nó sẽ capah nhật commit mới nhất.(nó có thể thay đổi commit). Thay đổi của một hoặc nhiều commit trong lịch sử commit và duy trì lịch sử commit chính xác của dự án
+9. git rebase:(git rebase <tên nhánh>) Là câu lệnh được hiểu là nó như merge gộp hai nhánh lại. nghĩ à nên dùng đưa về test dưới local và sửa conflic bên máy của người thực hiện 
+rebase và nó không phải remote chỉ bên dưới local nên ko giống merge về điều này.
