@@ -1,3 +1,5 @@
+---https://viblo.asia/p/19-bi-kip-ban-co-the-dung-khi-pham-sai-lam-voi-git-dWrvwdmPRw38--
+---https://viblo.asia/p/hieu-co-ban-ve-git-reset-git-revert-git-rebase-Rk74aDNrVeO--
 1. Cat .git/HEAD: xem phần head đang ở branch nào và cũng chỉ commit cuối cùng của nhánh.
 2. git log: kiểm tra lịch sử commit
 3. git log --oneline : kiểm tra danh sách nhánh 
@@ -7,7 +9,6 @@
               +,  git switch (tên nhánh): chuyển nhánh và cập nhạt trạng thái nhánh là HEAD.
 6. git brand: + git branch : hiện thị nhánh cục bộ cũng như nhánh remote
               + git brand (tên nhánh): tạo nhánh
-https://viblo.asia/p/hieu-co-ban-ve-git-reset-git-revert-git-rebase-Rk74aDNrVeO
 7. git reset: dùng để quay lại trạng thái commit cần được chỉ định(nên dùng khi chưa push vì push rồi sẽ vẫn pull về được)
               --hard|soft HEAD     -> Di chuyển con trỏ đến commit hiện tại.
               --hard|soft HEAD^    -> Quay về trước 1 commit so với HEAD.
@@ -21,4 +22,20 @@ và mình thay đổi trong đó đồn thời commit lại nó sẽ capah nhậ
 9. git rebase:(git rebase <tên nhánh>) Là câu lệnh được hiểu là nó như merge gộp hai nhánh lại. nghĩ à nên dùng đưa về test dưới local và sửa conflic bên máy của người thực hiện 
 rebase và nó không phải remote chỉ bên dưới local nên ko giống merge về điều này.
 10. forks : tức là sẽ lấy repo của người khác về github của mình mà không cần clone(nó thay đổi nhưng không ảnh hưởng đến repo
-chính và nó cũng có thể tạo pullrequest) 
+chính và nó cũng có thể tạo pullrequest) .
+11.Khi lỡ tay xoá mất một commit cực kì cực kì quan trọng:
+        # Đầu tiên là xem lại toàn bộ lịch sử commit
+        $ git reflog
+        
+        # Từ đó chọn commit muốn phục hồi và khôi phục lại
+        # ví dụ）git reset --hard HEAD@{2}
+        $ git reset --hard <commit>
+12. Khi lỡ tay xoá mất branch và muốn lấy lại
+        # Đầu tiên là xem lại toàn bộ lịch sử commit
+        $ git reflog
+        
+        # Từ các commit này, chọn rồi tạo branch mới
+        # ví dụ）git branch new-branch HEAD@{2}
+        $ git branch <tên branch> <commit>
+
+
