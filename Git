@@ -37,5 +37,6 @@ chính và nó cũng có thể tạo pullrequest) .
         # Từ các commit này, chọn rồi tạo branch mới
         # ví dụ）git branch new-branch HEAD@{2}
         $ git branch <tên branch> <commit>
-
+13. vấn đề với một merge bị conflict và muốn quay lại trạng thái trước khi merge: 
+        #  git merge --abort
 
