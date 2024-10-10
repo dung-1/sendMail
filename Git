@@ -39,4 +39,6 @@ chính và nó cũng có thể tạo pullrequest) .
         $ git branch <tên branch> <commit>
 13. vấn đề với một merge bị conflict và muốn quay lại trạng thái trước khi merge: 
         #  git merge --abort
-
+                     # Vậy khi nào nên dùng git reset, khi nào nên dùng git revert?
+Sử dụng git reset khi bạn muốn xóa các commit và thay đổi liên quan khỏi lịch sử commit và không quan tâm đến lịch sử commit ban đầu.
+Sử dụng git revert khi bạn muốn hoàn tác các thay đổi của một hoặc nhiều commit trong lịch sử commit và duy trì lịch sử commit chính xác của dự án để mọi người tiện theo dõi
