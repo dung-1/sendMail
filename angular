@@ -1,0 +1,15 @@
+1. Dọn dẹp cache và chạy lại dự án:
+npm cache clean --force
+ng serve --open
+2. error:Property '...' has no initializer and is not definitely assigned in the constructor:
+ tsconfig.json:     "strictPropertyInitialization": false,
+3.Tạo Component: 
+ng g c component-name
+4.Tạo Service:
+ng g s service-name
+5.Tạo Module:
+ng g m module-name
+6.Tạo Directive:
+ng g d directive-name
+7.Tạo Environment
+
