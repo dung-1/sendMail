@@ -12,4 +12,7 @@ ng g m module-name
 6.Tạo Directive:
 ng g d directive-name
 7.Tạo Environment
-
+8.
+You need to make sure you have the @angular/localize package first:
+npm install @angular/localize --save
+Then, import '@angular/localize/init' in your polyfills.ts file just like the error says
