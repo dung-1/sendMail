@@ -16,3 +16,4 @@ ng g d directive-name
 You need to make sure you have the @angular/localize package first:
 npm install @angular/localize --save
 Then, import '@angular/localize/init' in your polyfills.ts file just like the error says
+9. thêm [innerHTML] khi sử dụng Rich Text Editor của ej2s
