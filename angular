@@ -29,3 +29,22 @@ Then, import '@angular/localize/init' in your polyfills.ts file just like the er
   showData(dt){
     debugger
   }
+
+12. Khi trong hàm thiếu 1 sự kiện gì(ví dụ hiện thị dữ liệu lên view thì ta chỉ việc lấy được dữ liệu ra và đồng thời khai báo các biến rồi thực hiện thêm vào và lấy hiện thị dữ liệu thôi)
+   onDoubleClick(e: any) {
+    const modifiedEvent = {
+      type: 'doubleClick',
+      rowData: {
+        taskData: e,
+      },
+    };
+
+    switch (modifiedEvent.type) {
+      case 'doubleClick':
+        if (modifiedEvent.rowData) {
+          this.view.dataService.dataSelected = modifiedEvent.rowData.taskData;
+          this.viewTasks();
+        }
+        break;
+    }
+  }
