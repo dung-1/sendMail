@@ -49,3 +49,10 @@ Then, import '@angular/localize/init' in your polyfills.ts file just like the er
     }
   }
 13. Cách thêm điều kiện trong html mà không làm thay đổi css khi đã được định nghĩa là thêm vào thẻ <ng-container>
+14. Cách sửa lối css khi có điều kiện if bị false và có thẻ for bọc bên ngoài thì ta sử dụng như sau:
+     html : <div class="history-details" [class.history-details-active]="item.comment !== null" *ngFor="let item of filteredHistory">
+            <ng-container *ngIf="item.comment !== null">
+     css:    .history-details {
+                 &.history-details-active {
+                  .......
+              }
