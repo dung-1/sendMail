@@ -48,3 +48,4 @@ Then, import '@angular/localize/init' in your polyfills.ts file just like the er
         break;
     }
   }
+13. Cách thêm điều kiện trong html mà không làm thay đổi css khi đã được định nghĩa là thêm vào thẻ <ng-container>
