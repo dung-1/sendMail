@@ -56,3 +56,7 @@ Then, import '@angular/localize/init' in your polyfills.ts file just like the er
                  &.history-details-active {
                   .......
               }
+15. Cách thực hiện thêm điều kiện hàm vào teampleate chung thì thực hiện truyền 1 biến (boolean) vào if else 
+    checkhistory : boolean = boolean
+    componenet con :*ngIf="checkhistory ?...hàm....."
+    componenet cha : checkhistory="true/false"
