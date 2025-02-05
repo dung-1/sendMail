@@ -60,3 +60,7 @@ Then, import '@angular/localize/init' in your polyfills.ts file just like the er
     checkhistory : boolean = boolean
     componenet con :*ngIf="checkhistory ?...hàm....."
     componenet cha : checkhistory="true/false"
+
+16. Design Pattern trong Angular: 
+ - Dependency Injection (DI): Mục đích là quản lý các dependencies (service) và cung cấp chúng tự động cho các component như vậy sẽ giảm sự phụ thuộc giữa các component.
+ - 
