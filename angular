@@ -63,4 +63,35 @@ Then, import '@angular/localize/init' in your polyfills.ts file just like the er
 
 16. Design Pattern trong Angular: 
  - Dependency Injection (DI): Mục đích là quản lý các dependencies (service) và cung cấp chúng tự động cho các component như vậy sẽ giảm sự phụ thuộc giữa các component.
- - 
+   + ex:Bạn đi ăn nhà hàng, nhà hàng (Class A) không cần tự nấu món ăn, mà được bếp (Class B) cung cấp món ăn.
+   + @Injectable()
+       class UserComponent {
+           constructor(private userService: UserService) {} // Được inject vào
+           
+           getUsers() {
+               return this.userService.getUsers();
+           }
+       }
+  - Singleton Pattern:Đảm bảo chỉ một instance duy nhất của service tồn tại trong ứng dụng.
+  + Trong một công ty chỉ có một giám đốc điều hành(thích hợp cho lưu trạng thái đăng nhập, cache dữ liệu.)
+- Observable Pattern (RxJS):Sử dụng Observable và Subject từ thư viện RxJS để quản lý luồng dữ liệu.
+   Có 2 thành phần chính:
+     Observable (nguồn dữ liệu thay đổi liên tục)
+     Observer (người đăng ký lắng nghe dữ liệu thay đổi)
+     Khi Observable phát dữ liệu (next()), tất cả Observer sẽ nhận được thông báo.
+     Dùng trong giao tiếp giữa các component, quản lý sự kiện, gọi API, WebSocket.
+     Giao tiếp giữa các components
+     Xử lý HTTP requests
+     Xử lý events (click, input, etc.)
+  + Kênh YouTube - Người xem (Subscriber) sẽ nhận được thông báo khi có video mới (Publisher)
+- Component-Based Architecture
+Mục đích: Chia UI thành các component độc lập, tái sử dụng.
+Ví dụ: Tạo component ButtonComponent:
+@Component({
+  selector: 'app-button',
+  template: `<button [class]="type">{{ label }}</button>`,
+})
+export class ButtonComponent {
+  @Input() label: string = 'Click me!';
+  @Input() type: 'primary' | 'secondary' = 'primary';
+}  
