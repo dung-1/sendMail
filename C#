@@ -1,1 +1,14 @@
+Design Pattern:
+a. Dependency Injection (DI) :Giúp quản lý các dependency trong ứng dụng một cách dễ dàng. ASP.NET Core hỗ trợ sẵn DI.
+- Ví dụ thực tế: Tiêm IProductRepository vào Controller.
+b. Repository Pattern: Tách biệt logic truy vấn dữ liệu với tầng business logic. Dùng trong ASP.NET Core với Entity Framework để quản lý dữ liệu tốt hơn.
+- Ví dụ thực tế: Quản lý bảng Product trong database.
++ public class Product
++ public interface IProductRepositor
++ public class ProductRepository : IProductRepository
+   private readonly ApplicationDbContext _context;
 
+    public ProductRepository(ApplicationDbContext context) {
+        _context = context;
+    }
+c. 
