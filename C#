@@ -24,3 +24,15 @@ Luôn xử lý lỗi đúng cách để làm cho chương trình hoạt động 
 Chức năng của throw
 throw được dùng để ném một Exception, tức là làm cho chương trình dừng lại và báo lỗi.
 Có thể dùng throw để tạo lỗi mới hoặc ném lại lỗi đã bắt.
+2.Trong C# .NET, HasValue là một thuộc tính của kiểu dữ liệu nullable value types (Nullable<T>). Nó được sử dụng để kiểm tra xem một biến nullable (int?, double?, bool?, v.v.) có chứa giá trị hợp lệ hay không
+  int? age = null;
+if (age.HasValue)
+{
+    Console.WriteLine($"Tuổi của bạn là: {age.Value}");
+}
+else
+{
+    Console.WriteLine("Chưa có thông tin về tuổi.");
+}
+HasValue chỉ kiểm tra xem biến có giá trị hay không.
+Value dùng để lấy giá trị của biến. Nếu biến là null, truy cập Value sẽ gây lỗi InvalidOperationException.
