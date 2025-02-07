@@ -36,3 +36,8 @@ else
 }
 HasValue chỉ kiểm tra xem biến có giá trị hay không.
 Value dùng để lấy giá trị của biến. Nếu biến là null, truy cập Value sẽ gây lỗi InvalidOperationException.
+📌 Kết luận
+✅ HasValue là một thuộc tính của nullable types (int?, double?, DateTime?, ...).
+✅ Giúp kiểm tra xem biến nullable có giá trị hay không.
+✅ Nên dùng HasValue trước khi truy cập Value để tránh lỗi.
+✅ Hữu ích trong xử lý dữ liệu thiếu (null) như ngày sinh, tuổi, giá trị cảm biến, v.v.
