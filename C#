@@ -1,3 +1,4 @@
+Common Language Runtime (CLR) 
 Design Pattern:
 a. Dependency Injection (DI) :Giúp quản lý các dependency trong ứng dụng một cách dễ dàng. ASP.NET Core hỗ trợ sẵn DI.
 - Ví dụ thực tế: Tiêm IProductRepository vào Controller.
@@ -11,4 +12,15 @@ b. Repository Pattern: Tách biệt logic truy vấn dữ liệu với tầng bu
     public ProductRepository(ApplicationDbContext context) {
         _context = context;
     }
-c. 
+1.  Exception trong C#:  là một cơ chế được sử dụng để xử lý các lỗi hoặc tình huống bất thường xảy ra trong quá trình thực thi chương trình. Khi một lỗi xảy ra, hệ thống sẽ "ném" một đối tượng Exception (ngoại lệ) để thông báo về lỗi đó
+  - Cấu trúc Exception trong C#: Exception Class: Đây là lớp cơ sở cho tất cả các loại ngoại lệ trong C#, Đối tượng Exception: Một ngoại lệ trong C# được biểu thị dưới dạng một đối tượng của lớp Exception hoặc các lớp con của nó (ví dụ: NullReferenceException, FileNotFoundException, v.v.)
+    Thuộc tính của Exception
+  - . Khi nào nên dùng Exception: Xử lý lỗi ngoại lệ: Khi bạn muốn xử lý các tình huống bất thường mà không làm gián đoạn chương trình. Ví dụ, đọc file không tồn tại, hoặc kết nối cơ sở dữ liệu thất bại.
+Exception là cơ chế quan trọng giúp xử lý lỗi trong C#.
+try-catch-finally giúp bắt lỗi và đảm bảo chương trình không bị dừng đột ngột.
+throw giúp tạo lỗi hoặc ném lỗi để xử lý ở cấp cao hơn.
+Luôn xử lý lỗi đúng cách để làm cho chương trình hoạt động ổn định hơn.
+2 throw trong C#
+Chức năng của throw
+throw được dùng để ném một Exception, tức là làm cho chương trình dừng lại và báo lỗi.
+Có thể dùng throw để tạo lỗi mới hoặc ném lại lỗi đã bắt.
