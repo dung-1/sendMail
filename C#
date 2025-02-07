@@ -41,3 +41,4 @@ Value dùng để lấy giá trị của biến. Nếu biến là null, truy c�
 ✅ Giúp kiểm tra xem biến nullable có giá trị hay không.
 ✅ Nên dùng HasValue trước khi truy cập Value để tránh lỗi.
 ✅ Hữu ích trong xử lý dữ liệu thiếu (null) như ngày sinh, tuổi, giá trị cảm biến, v.v.
+ếu không muốn dùng HasValue, có thể dùng toán tử ?? để gán giá trị mặc định
