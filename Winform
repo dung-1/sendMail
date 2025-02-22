@@ -1,4 +1,4 @@
- Cấu trúc N-Layer. Hãy cùng phân tích các tầng (layer) chính:
+ # Cấu trúc N-Layer. Hãy cùng phân tích các tầng (layer) chính
 - Domain Layer (Tầng miền):
   Chứa các model cốt lõi của ứng dụng
   Định nghĩa các entity và business objects
@@ -15,3 +15,91 @@
   Chứa các Windows Forms
   Xử lý tương tác với người dùng
   Gọi các service từ Business Layer
+# cách deploy winform lên destop thực hiện các bước sau
+ - video hướng dẫn: https://www.youtube.com/watch?v=NOkBUoP54b8&t=501s&ab_channel=BoostMyTool
+ - các bước : 
+   Cài đặt Extension cần thiết:
+       1. Mở Visual Studio
+       2. Tools > Get Tools and Features
+       3. Tìm "Microsoft Visual Studio Installer Projects"
+       4. Cài đặt extension
+       5. Khởi động lại Visual Studio
+  Tạo Setup Project:
+       1. Trong Solution Explorer, chuột phải vào Solution
+       2. Add > New Project
+       3. Trong hộp tìm kiếm, gõ "setup"
+       4. Chọn "Setup Project" (dưới mục Other Types > Setup and Deployment)
+       5. Đặt tên là "CalculatorSetup"
+       6. Click Create
+Thêm Primary Output:
+   - Trong Setup Project mới:
+   - Chuột phải vào "Application Folder"
+   - Add > Project Output
+   - Chọn project CalculatorApp.UI
+   - Chọn "Primary Output"
+   - Click OK
+Thêm Dependencies:
+    1. Chuột phải vào Setup Project
+    2. View > File System
+    3. Chuột phải Application Folder
+    4. Add > Assembly
+    5. Thêm các file .dll từ các project:
+Cấu hình Properties của Setup Project:
+    1. Chọn Setup Project
+    2. Mở Properties Window (F4)
+    3. Cấu hình các thông tin:
+       - Author: [Tên của bạn]
+       - Description: Calculator Application
+       - Manufacturer: [Tên công ty/tổ chức]
+       - ProductName: Calculator
+       - Version: 1.0.0
+       - AddRemoveProgramsIcon:
+[Icon của ứng dụng]
+Thêm User Interface:
+      1. Chuột phải vào Setup Project
+      2. View > User Interface
+      3. Thêm các dialog cần thiết:
+         - Start > Add Dialog > Welcome
+         - Installation Folder > Add Dialog > Browse
+         - Progress > Add Dialog > Progress
+         - End > Add Dialog > Finish
+Thêm Shortcuts:
+        1. View > File System
+        2. Chuột phải User's Programs Menu
+        3. Add > Folder > Calculator
+        4. Chuột phải folder Calculator
+        5. Add > Shortcut
+        6. Chọn Primary Output từ CalculatorApp.UI
+        7. Đặt tên "Calculator"
+        8. Thêm Desktop Shortcut:
+           - Chuột phải User's Desktop
+           - Add > Shortcut
+           - Chọn Primary Output
+           - Đặt tên "Calculator"
+Cấu hình Prerequisites:
+       1. Chuột phải Setup Project
+       2. Properties
+       3. Prerequisites
+       4. Chọn các components cần thiết:
+          - .NET Framework 4.8
+          - Windows Installer
+Build Installation Package:
+      1. Chọn Release configuration
+      2. Chuột phải Setup Project
+      3. Build
+      4. File .msi sẽ được tạo trong thư mục:
+         [Solution Directory]\CalculatorSetup\Release\
+Test Installation Package:
+     1. Tìm file .msi trong thư mục Release
+     2. Copy sang máy khác để test
+     3. Test các scenario:
+        - Install
+        - Run application
+        - Uninstall
+Phân phối cho người dùng:
+     1. Tạo folder chứa:
+        - File .msi
+        - Readme.txt
+        - System Requirements.txt
+        - Installation Guide.txt
+     2. Nội dung Readme.txt:
