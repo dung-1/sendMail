@@ -1,0 +1,17 @@
+ Cấu trúc N-Layer. Hãy cùng phân tích các tầng (layer) chính:
+- Domain Layer (Tầng miền):
+  Chứa các model cốt lõi của ứng dụng
+  Định nghĩa các entity và business objects
+  Không phụ thuộc vào bất kỳ layer nào khác
+- Data Layer (Tầng dữ liệu):
+  Chịu trách nhiệm tương tác với cơ sở dữ liệu
+  Sử dụng Repository Pattern để trừu tượng hóa việc truy cập dữ liệu
+  Có thể lưu trữ bằng memory hoặc kết nối với csdl
+- Business Layer (Tầng nghiệp vụ):
+  Chứa logic nghiệp vụ của ứng dụng
+  Xử lý các yêu cầu từ Presentation Layer
+  Sử dụng các Repository để tương tác với dữ liệu
+- Presentation Layer (Tầng giao diện):
+  Chứa các Windows Forms
+  Xử lý tương tác với người dùng
+  Gọi các service từ Business Layer
