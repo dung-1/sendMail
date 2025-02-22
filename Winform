@@ -17,7 +17,7 @@
   Gọi các service từ Business Layer
 # cách deploy winform lên destop thực hiện các bước sau
  - video hướng dẫn: https://www.youtube.com/watch?v=NOkBUoP54b8&t=501s&ab_channel=BoostMyTool
- - các bước : 
+ - Link hướng dẫn : https://www.advancedinstaller.com/create-setup-exe-visual-studio.html 
    Cài đặt Extension cần thiết:
        1. Mở Visual Studio
        2. Tools > Get Tools and Features
