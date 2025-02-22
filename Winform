@@ -103,3 +103,31 @@ Phân phối cho người dùng:
         - System Requirements.txt
         - Installation Guide.txt
      2. Nội dung Readme.txt:
+# Quy tắc đặt tên biến trong winform:
+   Loại Control	Tiền tố	Ví dụ
+Button :	btn	
+Label	:lbl	
+Textbox	:txt	
+RichTextBox :rtb
+CheckBox	:chk	
+RadioButton	:rdo	
+ComboBox	:cmb	
+ListBox	:lst	
+DataGridView	:dgv	
+Panel	:pnl	
+PictureBox	:pic	
+Timer	:tmr	
+ProgressBar	:prg
+TrackBar (Slider)	:trk	
+TabControl	:tab	
+TreeView	:trv	
+MenuStrip	mnu	
+ContextMenuStrip	:ctx	
+ToolStrip	:tls	
+StatusStrip	sts	
+NumericUpDown	:nud	
+MaskedTextBox	:mtxt	
+DateTimePicker	:dtp	
+FlowLayoutPanel	:flp	
+TableLayoutPanel	:tlp	
+WebBrowser	:wb	
