@@ -42,3 +42,32 @@ Value dùng để lấy giá trị của biến. Nếu biến là null, truy c�
 ✅ Nên dùng HasValue trước khi truy cập Value để tránh lỗi.
 ✅ Hữu ích trong xử lý dữ liệu thiếu (null) như ngày sinh, tuổi, giá trị cảm biến, v.v.
 ếu không muốn dùng HasValue, có thể dùng toán tử ?? để gán giá trị mặc định
+
+
+Cách 1: Code First (Entities → Migrations → Database)
+Với cách này, bạn:
+
+Tạo các class Entity trong thư mục Models/Entities
+Cấu hình DbContext để map các entity với database
+Sử dụng EF Core Migrations để tạo và cập nhật database
+
+Ưu điểm:
+
+Quản lý schema trong code, dễ theo dõi thay đổi qua Git
+Dễ dàng áp dụng các nguyên tắc OOP vào entities
+Tự động tạo và cập nhật database qua migrations
+Thích hợp với DI và testing
+
+Cách 2: Database First (SQL Schema → Scaffold → Entities)
+Với cách này, bạn:
+
+Tạo database và các bảng trực tiếp trên SQL Server
+Sử dụng công cụ scaffold để tạo tự động các entity từ database
+
+Ưu điểm:
+
+Phù hợp khi đã có sẵn database
+DBA có thể trực tiếp làm việc với database
+Có thể tận dụng các tính năng đặc thù của SQL Server
+
+Lệnh scaffold:dotnet ef dbcontext scaffold "Connection String" Microsoft.EntityFrameworkCore.SqlServer -o Models/Entities
