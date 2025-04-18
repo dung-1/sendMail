@@ -71,3 +71,4 @@ DBA có thể trực tiếp làm việc với database
 Có thể tận dụng các tính năng đặc thù của SQL Server
 
 Lệnh scaffold:dotnet ef dbcontext scaffold "Connection String" Microsoft.EntityFrameworkCore.SqlServer -o Models/Entities
+dotnet ef dbcontext scaffold "Server=name;Database=name;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -o Models/Entities -c WebChatDbContext --context-dir Data
