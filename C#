@@ -72,3 +72,4 @@ Có thể tận dụng các tính năng đặc thù của SQL Server
 
 Lệnh scaffold:dotnet ef dbcontext scaffold "Connection String" Microsoft.EntityFrameworkCore.SqlServer -o Models/Entities
 dotnet ef dbcontext scaffold "Server=name;Database=name;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -o Models/Entities -c WebChatDbContext --context-dir Data
+Nếu bạn chỉ muốn scaffold một số bảng nhất định, bạn có thể sử dụng tham số -t:dotnet ef dbcontext scaffold "ConnectionString" Microsoft.EntityFrameworkCore.SqlServer -o Models/Entities -c WebChatDbContext --context-dir Data -t Users -t Conversations -t Messages
