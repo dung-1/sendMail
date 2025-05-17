@@ -16,7 +16,13 @@
 7. Dừng container đang dùng image đang chạy: docker stop id{6650e8915c14}
 8. Xoá container đó: docker rm id{6650e8915c14}
 9. Xoá image không cần:docker rmi name{image_id_or_name}
+10.  Cách đặt lại tên (nếu bạn build sai tên): docker tag blazor_app dungcts/blazor_app - sau đó - docker push dungcts/blazor_app
 
+
+           cách tạo docker hub và đẩy lên
+1. Đăng nhập Docker: docker login
+2. build docker cần có dấu . cuối dòng: docker build -t name{blazor_app} .
+3.Push image lên Docker Hub: docker push name{blazor_app}
 
 
 
