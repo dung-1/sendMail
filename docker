@@ -17,12 +17,24 @@
 8. Xoá container đó: docker rm id{6650e8915c14}
 9. Xoá image không cần:docker rmi name{image_id_or_name}
 10.  Cách đặt lại tên (nếu bạn build sai tên): docker tag blazor_app dungcts/blazor_app - sau đó - docker push dungcts/blazor_app
-
-
+11. TÓM TẮT QUY TRÌNH CẬP NHẬT MỘT DỰ ÁN ĐÃ PUSH LÊN DOCKER HUB
+            📌 TÓM GỌN QUY TRÌNH
+            Bước	Lệnh
+            1. Rebuild image	docker build -t dungcts/blazor-sql-app:latest ./BlazorApp
+            2. Push lên Docker Hub	docker push dungcts/blazor-sql-app:latest
+            3. (nếu dùng compose) Pull lại trên máy khác	docker-compose pull && docker-compose up -d
+            ❗Lưu ý về dữ liệu SQL:
+            Nếu CSDL nằm trong volume riêng, thì dữ liệu không bị mất khi bạn cập nhật image.
+            Nếu bạn muốn cập nhật dữ liệu mẫu, cần xóa volume cũ trước khi docker-compose up.
+            bash
+            Sao chép
+            Chỉnh sửa
+            docker-compose down -v
+            docker-compose up --build
            cách tạo docker hub và đẩy lên
-1. Đăng nhập Docker: docker login
-2. build docker cần có dấu . cuối dòng: docker build -t name{blazor_app} .
-3.Push image lên Docker Hub: docker push name{blazor_app}
+            1. Đăng nhập Docker: docker login
+            2. build docker cần có dấu . cuối dòng: docker build -t name{blazor_app} .
+            3.Push image lên Docker Hub: docker push name{blazor_app}
 
 
 
