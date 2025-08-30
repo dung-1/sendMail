@@ -6,3 +6,8 @@
 2. try-catch-finally và throws là hai cơ chế cốt lõi để quản lý lỗi (exceptions):
   - try-catch-finally: Dùng để chủ động xử lý một ngoại lệ ngay tại nơi nó có thể xảy ra (nó là người sẽ thực hiện xử lý lỗi luôn tại thời điểm chạy chương trình)
   - throws: Dùng để khai báo rằng một phương thức có thể ném ra ngoại lệ, đẩy trách nhiệm xử lý cho phương thức gọi nó.(nó chỉ bắt lỗi chứ không thực hiện sửa lỗi , nếu không sửa lỗi thì khi lỗi hệ thống sẽ dừng hoạt động)
+3. Generics là một tính năng trong Java cho phép các lớp, giao diện và phương thức hoạt động với các kiểu dữ liệu khác nhau (như String, Integer,...) một cách an toàn và tổng quát hơn, thay vì phải chỉ định một kiểu dữ liệu cụ thể.
+Kiểm tra kiểu dữ liệu tại thời điểm biên dịch, Loại bỏ ép kiểu tường minh, Tái sử dụng code
+   ví dụ : List <String> list = new ArrayList<String>(); // Chỉ định kiểu dữ liệu là String
+           list.add("hello");
+           String s = list.get(0); // Không cần ép kiểu
