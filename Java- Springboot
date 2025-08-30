@@ -1,0 +1,8 @@
+1. so sáng == và equals : 2 toán tử này đều so sánh nhưng nó khác nhau trong khi "==" thực hiện so sánh ĐỊA CHỈ Ô NHỚ, còn "equals" nó lại so sánh GIÁ TRỊ
+ - VÍ DỤ: String s1 = "hello"; và String s2 = "hello";, kết quả so sánh sẽ là:
+          s1 == s2 sẽ trả về true.
+          s1.equals(s2) cũng sẽ trả về true.
+   =>   Quy tắc vàng: Khi so sánh nội dung của hai chuỗi trong Java, luôn luôn sử dụng phương thức .equals() để tránh các lỗi logic không mong muốn.
+2. try-catch-finally và throws là hai cơ chế cốt lõi để quản lý lỗi (exceptions):
+  - try-catch-finally: Dùng để chủ động xử lý một ngoại lệ ngay tại nơi nó có thể xảy ra (nó là người sẽ thực hiện xử lý lỗi luôn tại thời điểm chạy chương trình)
+  - throws: Dùng để khai báo rằng một phương thức có thể ném ra ngoại lệ, đẩy trách nhiệm xử lý cho phương thức gọi nó.(nó chỉ bắt lỗi chứ không thực hiện sửa lỗi , nếu không sửa lỗi thì khi lỗi hệ thống sẽ dừng hoạt động)
