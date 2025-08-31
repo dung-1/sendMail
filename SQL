@@ -1,0 +1,6 @@
+1.  Các loại câu lệnh sql chính :
+  - DML: Data manipulation Language: Ngôn ngữ thao tác dữ liệu, Dùng để thao tác với dữ liệu bên trong bảng gồm (Select, Insert, Update và Delete)
+  - DDL: Data definition Language: Ngôn ngữ định nghĩa dữ liệu. Dùng để định nghĩa hoặc thay đổi cấu trúc của cơ sở dữ liệu, như các bảng, chỉ mục và ràng buộc. Các câu lệnh (Create, ALTER, DROP).
+  - DCL (Data Control Language): Ngôn ngữ kiểm soát dữ liệu. Dùng để quản lý quyền truy cập và bảo mật cơ sở dữ liệu. Các câu lệnh phổ biến (GRANT: Cấp quyền cho người dùng Và REVOKE: Thu hồi quyền đã cấp)
+  - TCL: Transaction Control Language): Ngôn ngữ kiểm soát giao dịch. Dùng để quản lý các giao dịch trong cơ sở dữ liệu để đảm bảo tính toàn vẹn của dữ liệu. Các câu lệnh (COMMIT: Lưu các thay đổi của giao dịch vào cơ sở dữ liệu. và ROLLBACK: Hủy bỏ các thay đổi của giao dịc)
+2. TRUNCATE dùng để toàn bộ dữ liệu của bảng.
