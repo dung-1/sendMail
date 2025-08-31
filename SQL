@@ -27,5 +27,8 @@ Stored Procedure và Function đều là các chương trình con được lưu 
     DML	                                    Có thể thực hiện các thao tác DML như INSERT, UPDATE, DELETE.	                                                    Không thể thực hiện các thao tác DML (chỉ cho phép trong một số trường hợp đặc biệt).
     Giao dịch	                              Có thể quản lý các giao dịch (sử dụng COMMIT, ROLLBACK).	                                                        Không thể quản lý giao dịch.
     Mục đích	                              Thực hiện một chuỗi các hành động hoặc logic nghiệp vụ phức tạp.	                                                 Tính toán một giá trị và trả về nó.
-
-
+8.Normalization (chuẩn hóa) trong cơ sở dữ liệu
+1NF: Không lặp nhóm, dữ liệu nguyên tử (mỗi ô 1 giá trị).
+2NF: Không phụ thuộc một phần vào khóa (tách bảng ra).
+3NF: Không phụ thuộc bắc cầu giữa các cột không khóa (chia thêm bảng).
+👉 Sau chuẩn hóa, dữ liệu gọn gàng, ít trùng lặp, dễ update, nhưng nhược điểm là JOIN nhiều bảng → truy vấn phức tạp hơn.
