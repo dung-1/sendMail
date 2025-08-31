@@ -11,3 +11,13 @@ Kiểm tra kiểu dữ liệu tại thời điểm biên dịch, Loại bỏ ép
    ví dụ : List <String> list = new ArrayList<String>(); // Chỉ định kiểu dữ liệu là String
            list.add("hello");
            String s = list.get(0); // Không cần ép kiểu
+4. Stream API: Stream trong Java nó giống như Linq Trong .Net (Nhưng Stream API phạm vi giới hạn hơn, nó là thao tác cuối cùng hay còn gọi là tính toán lười biếng).
+5.  IoC là nguyên tắc "đảo ngược quyền kiểm soát"  và  DI là cách thức cụ thể để thực hiện nguyên tắc đó, bằng cách "tiêm" các đối tượng phụ thuộc vào nhau từ bên ngoài.( câu chuyện ông sửa xe và người chủ xe đem xe đi sửa hoặc chiếc công tắc điện
+và chiếu máy xay sinh tố - nếu không tiêm công tắc vào thì máy xay không hoạt động)
+6. @Bean là một annotation trong Spring Framework, được sử dụng để khai báo rằng một phương thức sẽ tạo ra, cấu hình, và khởi tạo một Spring Bean. Annotation này thường được sử dụng trong các lớp được đánh dấu bởi @Configuration . Được dùng 
+để Khi bạn cần cấu hình một bean của một lớp bên thứ ba, Khi bạn cần tạo ra một đối tượng phức tạp, Khi bạn muốn có nhiều hơn một bean cùng loại(riêng biệt) 
+7. So sánh @Controller và @ResController
+                                                  @Controller	                                                                 @RestController
+                      Mục đích	             Xử lý các request và trả về View (trang HTML, JSP).                 	Xử lý các request và trả về dữ liệu thô (JSON, XML).
+                      Bao gồm	              Chỉ có @Controller.                                                  Là sự kết hợp của @Controller và @ResponseBody.
+                      Cách dùng	            Dùng cho các ứng dụng web truyền thống.	                              Dùng cho các dịch vụ web RESTful API.
