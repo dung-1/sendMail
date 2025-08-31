@@ -18,3 +18,14 @@
 6. UNION VÀ UNION ALL  [SELECT... FROM ..... UNION/UNION ALL SELECT...FROM...]
  - UNION: Sẽ tập hợp các tệp kết quả và loại bỏ các hàng trùng lặp, nó chỉ thực hiện 1 giá trị duy nhất, chậm hơn Union all.
  - UNION ALL: Sẽ tập hợp các tệp kết quả lại với nhau và đồng thời giữ lại tất cả các hàng, bao gồm các hàng trùng lặp. (Nó nhanh hơn union vì không cần lọc chỉ cần lấy ra)
+7. UNIQUE KEY: LÀ khóa duy nhất để đảm báo tính duy nhất trong bảng nó khác với PRIMARY KEY là nó có thể null, dùng để đảm bảo tính duy nhất của dữ liệu trên một hoặc nhiều cột, mỗi bảng có nhiều khóa duy nhất(ví dụ như sđt, dịa chỉ, email , thì không được trùng......)
+8 Phân biệt Stored Procedure và Function trong SQL
+Stored Procedure và Function đều là các chương trình con được lưu trữ trong cơ sở dữ liệu, nhưng chúng có những khác biệt quan trọng về mục đích và cách sử dụng:
+    Đặc điểm	                                          Stored Procedure	                                                                                      Function
+    Giá trị trả về	                        Có thể trả về không hoặc nhiều giá trị thông qua các tham số OUT.	                                                Bắt buộc phải trả về một giá trị duy nhất (đơn trị hoặc bảng).
+    Khả năng sử dụng	                      Có thể gọi độc lập bằng câu lệnh EXEC hoặc CALL. Không thể sử dụng trong câu lệnh SELECT.	                        Có thể được gọi độc lập, nhưng thường được sử dụng như một phần của câu lệnh SQL khác, ví dụ như trong SELECT, WHERE, HAVING.
+    DML	                                    Có thể thực hiện các thao tác DML như INSERT, UPDATE, DELETE.	                                                    Không thể thực hiện các thao tác DML (chỉ cho phép trong một số trường hợp đặc biệt).
+    Giao dịch	                              Có thể quản lý các giao dịch (sử dụng COMMIT, ROLLBACK).	                                                        Không thể quản lý giao dịch.
+    Mục đích	                              Thực hiện một chuỗi các hành động hoặc logic nghiệp vụ phức tạp.	                                                 Tính toán một giá trị và trả về nó.
+
+
