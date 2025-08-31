@@ -4,3 +4,17 @@
   - DCL (Data Control Language): Ngôn ngữ kiểm soát dữ liệu. Dùng để quản lý quyền truy cập và bảo mật cơ sở dữ liệu. Các câu lệnh phổ biến (GRANT: Cấp quyền cho người dùng Và REVOKE: Thu hồi quyền đã cấp)
   - TCL: Transaction Control Language): Ngôn ngữ kiểm soát giao dịch. Dùng để quản lý các giao dịch trong cơ sở dữ liệu để đảm bảo tính toàn vẹn của dữ liệu. Các câu lệnh (COMMIT: Lưu các thay đổi của giao dịch vào cơ sở dữ liệu. và ROLLBACK: Hủy bỏ các thay đổi của giao dịc)
 2. TRUNCATE dùng để toàn bộ dữ liệu của bảng.
+3 COUNT(*) và COUNT(column_name):
+ - Count(*): thực hiện đếm số lượng hàng có bao nhiêu trong bảng kể cả các hàng có giá trị null
+ - Count(column_name): đếm số lượng hàng có bao nhiêu có trong bảng nhưng nó không thực hiện đếm các hàng có giá trị null.
+4. HAVING khác WHERE như thế nào: 
+ - WHERE thường được dùng để lọc các giá trị riêng lẻ trước khi chúng được tạo bởi GROUP BY. Hạn chế sử dụng các hàm tổng hợp bên trong như(sum, count, avg,...)  [SLECT..FROM..WHERE..GROUPBY]
+ - Having thường được dùng để lọc nhóm dữ liệu sau khi thực hiện Group by. Nó bắt buộc sử dụng sau group by và thường đi cùng với các hàm tổng hợp trong điều kiện của nó.[SLECT..FROM..GROUPBY..HAVING]
+5.JOIN IN SQL  (SELECT Students.Name, Courses.CourseName  FROM Students ...JOIN Courses ON Students.StudentID = Courses.StudentID;)
+  - INNER JOIN (Phép giao) : thực hiện truy vấn giữa hai bảng, trả về các hàng có giá trị và khớp nhau giữa hai bảng. Nó sẽ loại bỏ những hàng không có dữ liệu,
+  - LEFT JOIN (Phép trái)  : Thực hiện truy vấn giữa hai bảng, trả về các giá trị tất cả các hàng bên trái và các giá trị khớp ở bên phải nếu không khớp thì sẽ trả về giá trị null
+  - RIGHT JOIN (Phép phải): Thực hiện truy vấn giữa hai bảng, trả về các giá trị tất cả các hàng bên phải và các giá trị khớp bên trái nếu không khớp thì sẽ trả về giá trị null
+  - FULL JOIN (Phép hợp): Thực hiện truy vấn giữa hai bảng, trả về các giá trị tất cả các hàng ở hai bảng nếu không có giá trị thì nó tự động điền giá trị null.
+6. UNION VÀ UNION ALL  [SELECT... FROM ..... UNION/UNION ALL SELECT...FROM...]
+ - UNION: Sẽ tập hợp các tệp kết quả và loại bỏ các hàng trùng lặp, nó chỉ thực hiện 1 giá trị duy nhất, chậm hơn Union all.
+ - UNION ALL: Sẽ tập hợp các tệp kết quả lại với nhau và đồng thời giữ lại tất cả các hàng, bao gồm các hàng trùng lặp. (Nó nhanh hơn union vì không cần lọc chỉ cần lấy ra)
