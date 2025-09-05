@@ -1,4 +1,6 @@
+https://studyarts.techzen.vn/#/home/curriculum/lesson?outlineInfo=%7B%22courseId%22%3A7102,%22courseName%22%3A%22Tr%E1%BA%A3i%20Nghi%E1%BB%87m%20Spring%20Boot%22,%22activeID%22%3A921936,%22redirectType%22%3A0%7D&isManagerCourse
 1. so sáng == và equals : 2 toán tử này đều so sánh nhưng nó khác nhau trong khi "==" thực hiện so sánh ĐỊA CHỈ Ô NHỚ, còn "equals" nó lại so sánh GIÁ TRỊ
+
  - VÍ DỤ: String s1 = "hello"; và String s2 = "hello";, kết quả so sánh sẽ là:
           s1 == s2 sẽ trả về true.
           s1.equals(s2) cũng sẽ trả về true.
@@ -21,3 +23,4 @@ và chiếu máy xay sinh tố - nếu không tiêm công tắc vào thì máy x
                       Mục đích	             Xử lý các request và trả về View (trang HTML, JSP).                 	Xử lý các request và trả về dữ liệu thô (JSON, XML).
                       Bao gồm	              Chỉ có @Controller.                                                  Là sự kết hợp của @Controller và @ResponseBody.
                       Cách dùng	            Dùng cho các ứng dụng web truyền thống.	                              Dùng cho các dịch vụ web RESTful API.
+8. Path Variable & Request Param 
