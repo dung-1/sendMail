@@ -1,1 +1,6 @@
-
+- Mã trạng thái HTTP: là các mã số có 3 chữ số được server trả về để chỉ rõ kết quả của một yêu cầu HTTP.
+  1xx(Informational): Thông tin, yêu cầu đang được xử lý.
+  2xx(Success): Thành công, yêu cầu đã được server xử lý thành công.
+  3xx(Redirection): Chuyển hướng, client cần thực hiện thêm hành động để hoàn thành yêu cầu.
+  4XX(Client Error): Lỗi từ phía client, yêu cầu không thể xử lý.
+  5xx(Server Error): Lỗi từ phía Server, server không thể xử lý yêu cầu.
